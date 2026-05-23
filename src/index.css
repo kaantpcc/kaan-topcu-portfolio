@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: #f7f8fa;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    color: #111827;
+    background: #f7f8fa;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgba(37, 99, 235, 0.16);
+    color: #111827;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-4 py-14 md:px-6 md:py-20;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-black focus:outline-none focus:ring-2 focus:ring-accent/30;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-line bg-white/90 px-5 py-3 text-sm font-semibold text-slatecopy shadow-sm transition-colors hover:border-accent/25 hover:text-ink focus:outline-none focus:ring-2 focus:ring-accent/25;
+  }
+
+  .icon-link {
+    @apply inline-grid h-10 w-10 place-items-center rounded-full border border-line bg-white/[0.78] text-slatecopy shadow-sm transition hover:border-accent/25 hover:text-ink focus:outline-none focus:ring-2 focus:ring-accent/25;
+  }
+
+  .contact-link {
+    @apply inline-flex min-h-11 items-center gap-3 rounded-2xl border border-white/[0.12] bg-white/[0.075] px-4 py-3 text-sm font-medium text-white/[0.8] transition hover:bg-white/[0.12] hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30;
+  }
+
+}
+
+.section-divider {
+  margin-top: -0.25rem;
+  margin-bottom: -0.25rem;
+}
+
+.section-divider-line {
+  position: relative;
+  height: 26px;
+}
+
+.section-divider-line::before,
+.section-divider-line::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.52), transparent);
+}
+
+.section-divider-line::before {
+  left: 0;
+  width: 42%;
+}
+
+.section-divider-line::after {
+  right: 0;
+  width: 42%;
+}
+
+.section-divider-line span {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  height: 7px;
+  width: 7px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.72);
+  box-shadow: 0 0 18px rgba(37, 99, 235, 0.2);
+}
+
+.section-divider-line span:nth-child(1) {
+  transform: translateX(-26px);
+  opacity: 0.45;
+}
+
+.section-divider-line span:nth-child(2) {
+  transform: translateX(-50%);
+}
+
+.section-divider-line span:nth-child(3) {
+  transform: translateX(19px);
+  opacity: 0.45;
+}
+
+.scroll-cue {
+  text-decoration: none;
+}
+
+.scroll-cue-icon span {
+  animation: scroll-cue-dot 1.7s ease-in-out infinite;
+}
+
+.background-grid {
+  background-image:
+    linear-gradient(rgba(17, 24, 39, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.065) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.route-packet {
+  animation: route-packet 22s linear infinite;
+}
+
+.route-packet-dot {
+  animation: route-packet-dot 22s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.scan-beam {
+  animation: scan-beam 18s ease-in-out infinite;
+  transform: translateY(-80px);
+}
+
+@keyframes route-packet {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  45%,
+  60% {
+    opacity: 0.52;
+  }
+}
+
+@keyframes route-packet-dot {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.95;
+  }
+  82% {
+    opacity: 0.95;
+  }
+  100% {
+    left: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
+@keyframes scan-beam {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  20% {
+    opacity: 0.55;
+  }
+  70% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateY(220px);
+  }
+}
+
+@keyframes scroll-cue-dot {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
