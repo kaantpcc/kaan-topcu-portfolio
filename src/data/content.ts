@@ -138,21 +138,21 @@ export const content = {
         {
           company: "BitkaSoft",
           title: "Junior Backend Developer",
-          date: "Ara 2025 – Nis 2026",
+          date: "Dec 2025 – Apr 2026",
           description:
             "Developed and maintained Node.js backend services for client-facing workflows, designed REST APIs, optimized PostgreSQL queries through schema refinement and indexing, implemented authentication mechanisms, and built production-ready Kommo CRM integrations for real customer operations."
         },
         {
           company: "Emakin",
           title: "Full Stack Developer Intern",
-          date: "Tem 2025 – Ağu 2025",
+          date: "July 2025 – Aug 2025",
           description:
             "Integrated .NET Framework services and REST APIs, supported SQL operations, configured XML-based business workflows on Emakin BPM, and contributed to the Arbalet AI Agent by ensuring stable backend service communication."
         },
         {
           company: "KOU Embedded Systems Lab",
           title: "Full Stack Developer",
-          date: "Mar 2024 – Nis 2025",
+          date: "Mar 2024 – Apr 2025",
           description:
             "Developed university-wide software solutions using ASP.NET Core MVC and MSSQL, focusing on REST API development, relational database design, and backend-driven application workflows. Built the KOU Mobile API Gateway with ASP.NET Core and Kong."
         }
@@ -349,21 +349,21 @@ export const content = {
         {
           company: "BitkaSoft",
           title: "Junior Backend Developer",
-          date: "Dec 2025 – Apr 2026",
+          date: "Ara 2025 – Nis 2026",
           description:
             "Müşteri operasyonlarına bağlı iş akışları için Node.js backend servisleri geliştirdim ve bakımını yaptım. REST API tasarımı, PostgreSQL sorgu optimizasyonu, şema düzenlemeleri, indeksleme, kimlik doğrulama mekanizmaları ve Kommo CRM entegrasyonları üzerinde çalıştım."
         },
         {
           company: "Emakin",
           title: "Full Stack Developer Intern",
-          date: "July 2025 – Aug 2025",
+          date: "Tem 2025 – Ağu 2025",
           description:
             ".NET Framework servisleri ve REST API entegrasyonları üzerinde çalıştım, SQL operasyonlarını destekledim, Emakin BPM üzerinde XML tabanlı iş akışları yapılandırdım ve Arbalet AI Agent için backend servis iletişimine katkı sağladım."
         },
         {
           company: "KOU Embedded Systems Lab",
           title: "Full Stack Developer",
-          date: "Mar 2024 – Apr 2025",
+          date: "Mar 2024 – Nis 2025",
           description:
             "ASP.NET Core MVC ve MSSQL kullanarak üniversite genelinde kullanılan yazılım çözümleri geliştirdim. REST API geliştirme, ilişkisel veritabanı tasarımı ve backend odaklı uygulama iş akışları üzerinde çalıştım. ASP.NET Core ve Kong ile KOU Mobile API Gateway’i geliştirdim."
         }
